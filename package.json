@@ -1,0 +1,32 @@
+{
+    "name": "vngrs-challenge",
+    "version": "0.0.1",
+    "description": "VNGRS challenge project",
+    "main": "index.html",
+    "scripts": {
+        "postinstall": "bower install",
+        "start": "gulp ",
+        "test": "gulp test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/keremulutas/vngrs-challenge.git"
+    },
+    "author": "Kerem Ulutaş <kerem@ulutas.gen.tr>",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/keremulutas/vngrs-challenge/issues"
+    },
+    "homepage": "https://bitbucket.org/sederek/gundemdekiler/overview",
+    "dependencies": {
+        "bower": "^1.7.9",
+        "gulp": "^3.9.1",
+        "gulp-connect": "^5.0.0",
+        "requirejs": "^2.3.2"
+    },
+    "analyze": true,
+    "devDependencies": {
+        "jasmine": "~2.5.2",
+        "jasmine-jquery": "~2.1.1"
+    }
+}
