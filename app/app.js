@@ -1,7 +1,7 @@
 define([
     "marionette",
     "handlebars",
-    "views/root",
+    "views/root/root",
     "utils",
 ], function(
     Marionette,

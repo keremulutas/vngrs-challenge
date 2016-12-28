@@ -2,8 +2,8 @@ define([
     "bootstrap",
     "marionette",
     "utils",
-    "text!templates/root.html",
-    "views/header"
+    "text!views/root/root.html",
+    "views/header/header"
 ],
 function(
     Bootstrap,

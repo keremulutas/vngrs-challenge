@@ -1,7 +1,7 @@
 define([
     "marionette",
     "utils",
-    "text!templates/header.html",
+    "text!views/header/header.html",
 ],
 function(
     Marionette,
