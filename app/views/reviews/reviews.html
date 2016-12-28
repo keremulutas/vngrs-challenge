@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="row">
+            <div id="flag-everyone" class="col-md-1">
+                <div class="flag bg1">
+                    <div>EVERYONE</div>
+                    <div class="count">{{#if collection.models.length}}({{collection.models.length}}){{/if}}</div>
+                </div>
+            </div>
+            <div id="flag-readers" class="col-md-1">
+                <div id="flag-readers" class="flag bg2">
+                    <div>READERS</div>
+                    <div class="count">{{#if byType.reader.length}}({{byType.reader.length}}){{/if}}</div>
+                </div>
+            </div>
+            <div id="flag-critics" class="col-md-1">
+                <div class="flag bg3">
+                    <div>CRITICS</div>
+                    <div class="count">{{#if byType.critic.length}}({{byType.critic.length}}){{/if}}</div>
+                </div>
+            </div>
+            <div id="flag-editors" class="col-md-1">
+                <div class="flag bg4">
+                    <div>EDITORS</div>
+                    <div class="count">{{#if byType.editor.length}}({{byType.editor.length}}){{/if}}</div>
+                </div>
+            </div>
+            <div id="flag-librarians" class="col-md-1">
+                <div class="flag bg5">
+                    <div>LIBRARIANS</div>
+                    <div class="count">{{#if byType.librarian.length}}({{byType.librarian.length}}){{/if}}</div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div id="flag-bloggers" class="flag bg6">
+                    <div>BLOGGERS</div>
+                    <div class="count">{{#if byType.blogger.length}}({{byType.blogger.length}}){{/if}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div id="reviewItems" class="row"></div>
+    </div>
+</div>

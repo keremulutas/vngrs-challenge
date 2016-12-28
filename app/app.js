@@ -33,6 +33,13 @@ define([
             Marionette.Renderer.render = function(template, data) {
                 return Handlebars.compile(template)(data);
             };
+
+            $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+                jqXHR.setRequestHeader(
+                    "X-client_id",
+                    "53489c26c4a9db05975549eaedb68a1eb7e7cb4fffcca9148c11ecb8d77e061f"
+                );
+            });
         },
         onStart: function(options) {
             this.showView(new RootView({

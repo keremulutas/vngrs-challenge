@@ -3,14 +3,16 @@ define([
     "marionette",
     "utils",
     "text!views/root/root.html",
-    "views/header/header"
+    "views/header/header",
+    "views/reviews/reviews",
 ],
 function(
     Bootstrap,
     Marionette,
     Utils,
     RootTemplate,
-    HeaderView
+    HeaderView,
+    ReviewsView
 ) {
     var RootView = Marionette.View.extend({
         template: RootTemplate,
@@ -24,8 +26,7 @@ function(
         onRender: function() {
             this.$el.attr("id", "wrapper");
             this.showChildView("header", new HeaderView());
-            // this.showChildView("sidebar", new SidebarView());
-            // this.showChildView("feed", new ActivityFeedView());
+            this.showChildView("content", new ReviewsView());
         },
     });
 

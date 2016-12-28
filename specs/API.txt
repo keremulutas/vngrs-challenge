@@ -1,0 +1,9 @@
+API key response:
+
+{
+  "data": {
+    "email": "kerem@ulutas.gen.tr",
+    "client_id": "53489c26c4a9db05975549eaedb68a1eb7e7cb4fffcca9148c11ecb8d77e061f"
+  },
+  "meta": {}
+}
