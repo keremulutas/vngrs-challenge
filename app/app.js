@@ -12,6 +12,7 @@ define([
     var appInstance = null;
 
     var BookReviewApp = Marionette.Application.extend({
+        logNamespace: "App",
         channelName: "BookReview",
         region: "body",
         radioRequests: {
@@ -25,10 +26,11 @@ define([
             },
         },
         initialize: function(options) {
-            Utils.msg.log("App", "Initialized.");
+            Utils.msg.log(this.logNamespace, "Initialized.");
         },
         onBeforeStart: function(options) {
-            Marionette.Renderer.render = function(template, data){
+            // we are setting Handlebars as the default template renderer here.
+            Marionette.Renderer.render = function(template, data) {
                 return Handlebars.compile(template)(data);
             };
         },

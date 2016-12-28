@@ -1,25 +1,29 @@
 define([
+    "bootstrap",
     "marionette",
     "utils",
     "text!templates/root.html",
+    "views/header"
 ],
 function(
+    Bootstrap,
     Marionette,
     Utils,
-    RootTemplate
+    RootTemplate,
+    HeaderView
 ) {
     var RootView = Marionette.View.extend({
         template: RootTemplate,
         regions: {
-            header: "#corvo_header",
-            sidebar: "#corvo_sidebar",
-            content: "#corvo_content",
-            feed: "#corvo_feed",
+            header: "#header",
+            content: "#content",
         },
         initialize: function(options) {
+            this.appInstance = options.appInstance;
         },
         onRender: function() {
-            // this.showChildView("header", new HeaderView());
+            this.$el.attr("id", "wrapper");
+            this.showChildView("header", new HeaderView());
             // this.showChildView("sidebar", new SidebarView());
             // this.showChildView("feed", new ActivityFeedView());
         },
