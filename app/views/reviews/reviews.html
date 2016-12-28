@@ -1,46 +1,73 @@
+<p id="pageTitle" class="text-center">
+    <span class="twoFonts titleBook font-signpainter-housescript">Book</span>
+    <span class="twoFonts titleReviews font-brandon-grotesque">REVIEWS</span>
+</p>
 <div class="row">
-    <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
+    <div class="flagsTitle col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10 font-brandon-grotesque">
+        SEE REVIEWS FROM:
+    </div>
+    <div class="flags col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div class="row">
             <div id="flag-everyone" class="col-md-1">
-                <div class="flag bg1">
+                <div data-filter="" class="font-brandon-grotesque flag bg1">
                     <div>EVERYONE</div>
                     <div class="count">{{#if collection.models.length}}({{collection.models.length}}){{/if}}</div>
                 </div>
             </div>
             <div id="flag-readers" class="col-md-1">
-                <div id="flag-readers" class="flag bg2">
+                <div data-filter="reader" class="font-brandon-grotesque flag bg2">
                     <div>READERS</div>
-                    <div class="count">{{#if byType.reader.length}}({{byType.reader.length}}){{/if}}</div>
+                    <div class="count">{{#if countsByType.reader}}({{countsByType.reader}}){{/if}}</div>
                 </div>
             </div>
             <div id="flag-critics" class="col-md-1">
-                <div class="flag bg3">
+                <div data-filter="critic" class="font-brandon-grotesque flag bg3">
                     <div>CRITICS</div>
-                    <div class="count">{{#if byType.critic.length}}({{byType.critic.length}}){{/if}}</div>
+                    <div class="count">{{#if countsByType.critic}}({{countsByType.critic}}){{/if}}</div>
                 </div>
             </div>
             <div id="flag-editors" class="col-md-1">
-                <div class="flag bg4">
+                <div data-filter="editor" class="font-brandon-grotesque flag bg4">
                     <div>EDITORS</div>
-                    <div class="count">{{#if byType.editor.length}}({{byType.editor.length}}){{/if}}</div>
+                    <div class="count">{{#if countsByType.editor}}({{countsByType.editor}}){{/if}}</div>
                 </div>
             </div>
             <div id="flag-librarians" class="col-md-1">
-                <div class="flag bg5">
+                <div data-filter="librarian" class="font-brandon-grotesque flag bg5">
                     <div>LIBRARIANS</div>
-                    <div class="count">{{#if byType.librarian.length}}({{byType.librarian.length}}){{/if}}</div>
+                    <div class="count">{{#if countsByType.librarian}}({{countsByType.librarian}}){{/if}}</div>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div id="flag-bloggers" class="flag bg6">
+            <div id="flag-bloggers" class="col-md-1">
+                <div data-filter="blogger" class="font-brandon-grotesque flag bg6">
                     <div>BLOGGERS</div>
-                    <div class="count">{{#if byType.blogger.length}}({{byType.blogger.length}}){{/if}}</div>
+                    <div class="count">{{#if countsByType.blogger}}({{countsByType.blogger}}){{/if}}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="row">
+    <div class="linksTitle col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10 font-brandon-grotesque">
+        <div class="row">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <p id="sortTitle">
+                    <span class="twoFonts titleVariable font-signpainter-housescript">Most Helpful</span>
+                    <span class="twoFonts titleReviews font-brandon-grotesque">REVIEWS</span>
+                </p>
+            </div>
+            <div class="sortByLabel col-xs-1 col-sm-1 col-md-1 col-lg-1 text-right">Sort by:</div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <select id="sortBy" class="form-control">
+                    {{#select sortBy}}
+                    <option value="mostHelpful">Most Helpful</option>
+                    <option value="highestRating">Highest Rating</option>
+                    <option value="newestFirst">Newest First</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </div>
     <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
         <div id="reviewItems" class="row"></div>
     </div>

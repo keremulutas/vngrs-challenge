@@ -21,7 +21,7 @@ function(
             this.model = options.model;
         },
         onRender: function() {
-            Utils.msg.log(this.logNamespace, "Rendered.");
+            // Utils.msg.log(this.logNamespace, "Rendered. Model:", this.model);
         },
     });
 

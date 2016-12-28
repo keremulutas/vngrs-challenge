@@ -2,8 +2,7 @@ require.config({
     paths: {
         jquery: "vendor/jquery/dist/jquery.min",
         bootstrap: "vendor/bootstrap/dist/js/bootstrap.min",
-        lodash: "vendor/lodash/dist/lodash.min",
-        underscore: "vendor/underscore/underscore-min",
+        underscore: "vendor/lodash/dist/lodash.min",
         backbone: "vendor/backbone/backbone-min",
         "backbone.radio": "vendor/backbone.radio/build/backbone.radio.min",
         marionette: "vendor/backbone.marionette/lib/backbone.marionette.min",
@@ -12,11 +11,11 @@ require.config({
         utils: "utils",
     },
     shim: {
-        lodash: {
+        underscore: {
             exports: "_",
         },
         backbone: {
-            deps: ["lodash", "jquery"],
+            deps: ["underscore", "jquery"],
             exports: "Backbone",
         },
         "backbone.radio": {

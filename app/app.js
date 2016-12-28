@@ -40,6 +40,12 @@ define([
                     "53489c26c4a9db05975549eaedb68a1eb7e7cb4fffcca9148c11ecb8d77e061f"
                 );
             });
+
+            Handlebars.registerHelper('select', function(value, options) {
+                var $el = $('<select />').html( options.fn(this) );
+                $el.find('[value="' + value + '"]').attr({'selected':'selected'});
+                return $el.html();
+            });
         },
         onStart: function(options) {
             this.showView(new RootView({
