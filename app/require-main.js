@@ -2,13 +2,14 @@ require.config({
     paths: {
         jquery: "vendor/jquery/dist/jquery.min",
         bootstrap: "vendor/bootstrap/dist/js/bootstrap.min",
-        underscore: "vendor/lodash/dist/lodash.min",
+        lodash: "vendor/lodash/dist/lodash.min",
+        underscore: "vendor/underscore/underscore-min",
         backbone: "vendor/backbone/backbone-min",
         "backbone.radio": "vendor/backbone.radio/build/backbone.radio.min",
         marionette: "vendor/backbone.marionette/lib/backbone.marionette.min",
         text: "vendor/requirejs-text/text",
         handlebars: "vendor/handlebars/handlebars.amd.min",
-        "handlebars-helpers": "vendor/handlebars-helpers/src/helpers",
+        moment: "vendor/moment/min/moment.min",
         utils: "utils",
     },
     shim: {

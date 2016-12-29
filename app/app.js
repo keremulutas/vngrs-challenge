@@ -1,13 +1,13 @@
 define([
     "marionette",
     "handlebars",
-    "handlebars-helpers",
+    "moment",
     "views/root/root",
     "utils",
 ], function(
     Marionette,
     Handlebars,
-    HandlebarsHelpers,
+    Moment,
     RootView,
     Utils
 ) {
@@ -64,6 +64,11 @@ define([
 
             Handlebars.registerHelper("sum", function(a, b) {
                 return a + b;
+            });
+
+            Handlebars.registerHelper("formatDate", function(d) {
+                var theDate = new Moment(d, "YYYY-MM-DD");
+                return theDate.format("MMMM D, YYYY");
             });
         },
         onStart: function(options) {
