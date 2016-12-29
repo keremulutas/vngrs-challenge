@@ -11,8 +11,18 @@ body {
 .navbar-brand img {
     margin-top: -4px;
 }
-#content {
-    /*padding-top: 60px;*/
+.reviewItem {
+    margin-bottom: 16px;
+    padding: 0 15px;
+}
+#wrapper {
+    overflow: hidden;
+}
+.star-positive {
+    color: #47a6ae;
+}
+.star-negative {
+    color: #c3c3c3;
 }
 #pageTitle {
     line-height: 25px;

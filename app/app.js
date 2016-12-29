@@ -1,11 +1,13 @@
 define([
     "marionette",
     "handlebars",
+    "handlebars-helpers",
     "views/root/root",
     "utils",
 ], function(
     Marionette,
     Handlebars,
+    HandlebarsHelpers,
     RootView,
     Utils
 ) {
@@ -41,10 +43,27 @@ define([
                 );
             });
 
-            Handlebars.registerHelper('select', function(value, options) {
-                var $el = $('<select />').html( options.fn(this) );
-                $el.find('[value="' + value + '"]').attr({'selected':'selected'});
+            Handlebars.registerHelper("select", function(value, options) {
+                var $el = $("<select />").html( options.fn(this) );
+                $el.find("[value=" + value + "]").attr({"selected": "selected"});
                 return $el.html();
+            });
+
+            Handlebars.registerHelper("starRate", function(positiveCount) {
+                var output = "";
+
+                for(var i=1; i <= positiveCount; i++) {
+                    output += '<i class="star-positive fa fa-star" aria-hidden="true"></i>';
+                }
+                for(var i=1; i <= (5 - positiveCount); i++) {
+                    output += '<i class="star-negative fa fa-star" aria-hidden="true"></i>';
+                }
+
+                return new Handlebars.SafeString(output);
+            });
+
+            Handlebars.registerHelper("sum", function(a, b) {
+                return a + b;
             });
         },
         onStart: function(options) {

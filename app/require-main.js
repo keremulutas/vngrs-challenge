@@ -8,6 +8,7 @@ require.config({
         marionette: "vendor/backbone.marionette/lib/backbone.marionette.min",
         text: "vendor/requirejs-text/text",
         handlebars: "vendor/handlebars/handlebars.amd.min",
+        "handlebars-helpers": "vendor/handlebars-helpers/src/helpers",
         utils: "utils",
     },
     shim: {
