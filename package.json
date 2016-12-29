@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "postinstall": "bower install",
-    "start": "gulp ",
+    "start": "gulp start",
     "test": "gulp test"
   },
   "repository": {

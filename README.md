@@ -5,4 +5,4 @@ VNGRS challenge project.
 run `npm install`.
 
 ## running
-run `gulp start`
+run `npm start`
