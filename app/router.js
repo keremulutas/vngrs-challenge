@@ -15,9 +15,7 @@ function(
     var routerInstance = null;
 
     var RouterController = Marionette.Object.extend({
-        home: function() {
-            // burada content region, main view ile doldurulacak!
-        },
+        home: function() {},
         defaultRoute: function(path) {
             Utils.msg.trace("[Router] No handler defined for this path: [", path, "]. Returning home.");
             Backbone.history.navigate("#", {
